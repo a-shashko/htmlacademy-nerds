@@ -225,20 +225,8 @@ input[type="radio"].visually-hidden {
   position: absolute;
   bottom: 0;
   left: 0;
+  width: 520px;
   margin-bottom: 80px;
-}
-
-.slide-1 .slide__description {
-  max-width: 380px;
-
-}
-
-.slide-2 .slide__description {
-  max-width: 520px;
-}
-
-.slide-3 .slide__description {
-  max-width: 410px;
 }
 
 .slide__description p {
@@ -311,8 +299,126 @@ input[type="radio"].visually-hidden {
 
 .main-offers {
   margin: 80px 0 0;
+  padding-bottom: 80px;
+  border-bottom: 2px solid #eeeeee;
 }
 
 .main-offers__list {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-offers__list li {
+  max-width: 300px;
+}
+
+.main-offers__list li:not(:nth-child(3n)) {
+  margin-right: 100px;
+}
+
+.main-offers__list img {
+  display: block;
+}
+
+.main-offers__list h3 {
+  font-size: 24px;
+  line-height: 30px;
+  margin: 30px 0;
+  text-transform: uppercase;
+}
+
+.main-offers__list p {
+  margin: 0;
+  margin-bottom: 35px;
+}
+
+.order-button {
+  width: 160px;
+  border: none;
+}
+
+.web-sites .order-button {
+  background-color: #fb565a;
+}
+
+.applications .order-button {
+  background-color: #00ca74;
+}
+
+.presentations .order-button {
+  background-color: #efc84a;
+}
+
+.about-us {
+  margin-top: 40px;
+}
+
+.about-us ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.index-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-us .index-columns {
+  border-bottom: 2px solid #eeeeee;
+}
+
+.index__left-column {
+  width: 660px;
+}
+
+.index__left-column h2 {
+  margin: 40px 0 35px;
+  font-size: 45px;
+  line-height: 45px;
+}
+
+.index__custom-title {
+  display: block;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.index-columns p {
+  margin: 0;
+  margin-bottom: 45px;
+}
+
+.about-us .about-us__list {
+  margin-top: 30px;
+  margin-bottom: 80px;
+}
+
+.about-us__list li {
+  position: relative;
+  margin-bottom: 35px;
+  padding-left: 35px;
+}
+
+.about-us__list li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 25px;
+  height: 2px;
+  background-color: #fb565a;
+  transform: translateY(-50%);
+}
+
+.index__right-column .index__custom-title {
+  margin: 40px 0 50px;
+}
+
+.about-us-numbers__list {
+  display: flex;
+  flex-direction: column;
 }
