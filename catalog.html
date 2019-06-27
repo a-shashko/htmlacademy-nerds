@@ -29,21 +29,29 @@
         <h1>Магазин готовых шаблонов</h1>
       </div>
     </header>
-    <main>
+    <main class="container">
       <div class="catalog-columns">
         <section class="catalog-filters">
           <h2 class="visually-hidden">Фильтр товаров</h2>
           <form class="catalog-filters__form" action="index.html" method="post">
-            <fieldset>
+            <fieldset class="price-filter">
               <legend>Стоимость:</legend>
-              <input type="range" name="price-range" value="15000" min="0" max="25000" id="price-range__id">
-              <label for="price-range__id" class="visually-hidden">Шкала</label>
-              <input type="text" name="price-from" value="0" id="price-form__id">
-              <label for="price-form__id">от</label>
-              <input type="text" name="price-to" value="15000" id="price-to__id">
-              <label for="price-to__id">до</label>
+              <ul class="price-filter__list">
+                <li>
+                  <label for="price-range__id" class="visually-hidden">Шкала</label>
+                  <input type="range" name="price-range" value="15000" min="0" max="25000" id="price-range__id">
+                </li>
+                <li>
+                  <label for="price-form__id">от</label>
+                  <input type="text" name="price-from" value="0" id="price-form__id">
+                </li>
+                <li>
+                  <label for="price-to__id">до</label>
+                  <input type="text" name="price-to" value="15000" id="price-to__id">
+                </li>
+              </ul>
             </fieldset>
-            <fieldset>
+            <fieldset class="grid-filter">
               <legend>Сетка:</legend>
               <ul class="filter-grid__list">
                 <li>
@@ -60,7 +68,7 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset>
+            <fieldset class="features-filter">
               <legend>Особенности:</legend>
               <ul class="filter-features__list">
                 <li>
@@ -90,7 +98,7 @@
         </section>
         <section class="catalog-goods">
           <h2 class="visually-hidden">Каталог товаров</h2>
-          <div class="catalog-goods-sorting">
+          <div class="goods-sorting">
             <span>Сортировать:</span>
             <ul class="goods-sorting__list">
               <li>По цене</li>
@@ -99,46 +107,68 @@
             </ul>
             <span class="goods-sorting__sign"></span>
           </div>
-          <div class="catalog-sorting-result">
-            <ul class="sorting-result__list">
-              <li><a href="#"><img src="img/img-sedona.jpg" width="360" height="576" alt="Sedona"></a></li>
-              <li><a href="#"><img src="img/img-pink.jpg" width="360" height="576" alt="Pink"></a></li>
-              <li><a href="#"><img src="img/img-barbershop.jpg" width="360" height="576" alt="Barbershop"></a></li>
-              <li><a href="#"><img src="img/img-mishka.jpg" width="360" height="576" alt="Mishka"></a></li>
-              <li><a href="#"><img src="img/img-aplus.jpg" width="360" height="576" alt="Aplus"></a></li>
-              <li><a href="#"><img src="img/img-kvast.jpg" width="360" height="576" alt="Kvast"></a></li>
-            </ul>
-          </div>
-          <div class="catalog-pagination">
-            <ul class="catalog-pagination__list">
-              <li><a href="#" class="current__link">1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li class="catalog-pagination__item--next"><a href="#">Следующая</a></li>
-            </ul>
-          </div>
+          <ul class="sorting-results__list">
+            <li><a href="#"><img src="img/img-sedona.jpg" width="360" height="576" alt="Sedona"></a></li>
+            <li><a href="#"><img src="img/img-pink.jpg" width="360" height="576" alt="Pink"></a></li>
+            <li><a href="#"><img src="img/img-barbershop.jpg" width="360" height="576" alt="Barbershop"></a></li>
+            <li><a href="#"><img src="img/img-mishka.jpg" width="360" height="576" alt="Mishka"></a></li>
+            <li><a href="#"><img src="img/img-aplus.jpg" width="360" height="576" alt="Aplus"></a></li>
+            <li><a href="#"><img src="img/img-kvast.jpg" width="360" height="576" alt="Kvast"></a></li>
+          </ul>
+          <ul class="catalog-pagination__list">
+            <li><a href="#" class="current__link">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li class="catalog-pagination__item--next"><a href="#">Следующая</a></li>
+          </ul>
         </section>
       </div>
     </main>
     <footer>
       <section class="footer-map">
-        <img src="img/map.jpg" width="1140" height="785" alt="карта проезда">
-        <div class="footer-map-contacts">
-          <h2>Nёrds design studio</h2>
-          <p>191186, Санкт-Петербург,<br>
-            ул. Б. Конюшенная, д. 19/8 <br>
-            <br>
-            тел. +7 (812) 275-75-75
-          </p>
+        <div class="container">
+          <div class="footer-map-contacts">
+            <h2>Nёrds design studio</h2>
+            <p>191186, Санкт-Петербург,<br>
+              ул. Б. Конюшенная, д. 19/8 <br>
+              <br>
+              тел. +7 (812) 275-75-75
+            </p>
+            <button type="submit" class="button map-contact-button">Напишите нам</button>
+          </div>
         </div>
       </section>
-      <ul class="footer-social__list">
-        <li><a href="#" class="vk"><span class="visually-hidden">Вконтакте</span></a></li>
-        <li><a href="#" class="facebook"><span class="visually-hidden">Фейсбук</span></a></li>
-        <li><a href="#" class="instagram"><span class="visually-hidden">Инстаграмм</span></a></li>
-      </ul>
-      <h2>Давайте дружить, это выгодно!</h2>
-      <p>Скидка 10% для друзей из социальных сетей.</p>
+      <section class="footer-social container">
+        <ul class="footer-social__list">
+          <li><a href="#" class="vk"><span class="visually-hidden">Вконтакте</span></a></li>
+          <li><a href="#" class="facebook"><span class="visually-hidden">Фейсбук</span></a></li>
+          <li><a href="#" class="instagram"><span class="visually-hidden">Инстаграмм</span></a></li>
+        </ul>
+        <div class="footer-social__description">
+          <h2>Давайте дружить, это выгодно!</h2>
+          <p>Скидка 10% для друзей из социальных сетей.</p>
+        </div>
+      </section>
     </footer>
+    <section class="modal modal-feedback">
+      <h2>Напишите нам</h2>
+      <form class="feedback-form" action="index.html" method="post">
+        <p>
+          <label for="feedback-name__id">Ваше имя:</label>
+          <input type="text" name="feedback-name" placeholder="Представьтесь, пожалуйста" id="feedback-name__id" required>
+        </p>
+        <p>
+          <label for="feedback-email__id">Ваш e-mail:</label>
+          <input type="email" name="feedback-email" placeholder="Для отправки ответа" id="feedback-email__id" required>
+        </p>
+        <p>
+          <label for="feedback-comment__id">Текст письма:</label>
+          <textarea name="feedback-comment" placeholder="В свободной форме" id="feedback-comment__id" required></textarea>
+        </p>
+        <input type="submit" class="button send-button" value="Отправить">
+      </form>
+      <button type="button" class="modal-close">Закрыть</button>
+    </section>
+    <script src="js/feedback.js"></script>
   </body>
 </html>

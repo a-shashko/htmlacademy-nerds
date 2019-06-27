@@ -113,10 +113,10 @@
           <div class="index__right-column">
             <img src="img/nerds-illustration.jpg" width="360" height="208" alt="Логотип">
             <span class="index__custom-title">С 2004 года любим точность во всем:</span>
-            <ul class="about-us-numbers__list">
-              <li><span>146%</span> Уровень самоотдачи</li>
-              <li><span>100%</span> Соблюдение сроков</li>
-              <li><span>50%</span> Минимальная предоплата</li>
+            <ul class="numbers__list">
+              <li><span>146</span> Уровень самоотдачи</li>
+              <li><span>100</span> Соблюдение сроков</li>
+              <li><span>50</span> Минимальная предоплата</li>
             </ul>
           </div>
         </div>
@@ -130,25 +130,49 @@
     </main>
     <footer>
       <section class="footer-map">
-        <img src="img/map.jpg" width="1140" height="785" alt="карта проезда">
-        <div class="footer-map-contacts">
-          <h2>Nёrds design studio</h2>
-          <p>191186, Санкт-Петербург,<br>
-            ул. Б. Конюшенная, д. 19/8 <br>
-            <br>
-            тел. +7 (812) 275-75-75
-          </p>
+        <div class="container">
+          <div class="footer-map-contacts">
+            <h2>Nёrds design studio</h2>
+            <p>191186, Санкт-Петербург,<br>
+              ул. Б. Конюшенная, д. 19/8 <br>
+              <br>
+              тел. +7 (812) 275-75-75
+            </p>
+            <button type="submit" class="button map-contact-button">Напишите нам</button>
+          </div>
         </div>
       </section>
-      <div class="container">
+      <section class="footer-social container">
         <ul class="footer-social__list">
           <li><a href="#" class="vk"><span class="visually-hidden">Вконтакте</span></a></li>
           <li><a href="#" class="facebook"><span class="visually-hidden">Фейсбук</span></a></li>
           <li><a href="#" class="instagram"><span class="visually-hidden">Инстаграмм</span></a></li>
         </ul>
-        <h2>Давайте дружить, это выгодно!</h2>
-        <p>Скидка 10% для друзей из социальных сетей.</p>
-      </div>
+        <div class="footer-social__description">
+          <h2>Давайте дружить, это выгодно!</h2>
+          <p>Скидка 10% для друзей из социальных сетей.</p>
+        </div>
+      </section>
     </footer>
+    <section class="modal modal-feedback">
+      <h2>Напишите нам</h2>
+      <form class="feedback-form" action="index.html" method="post">
+        <p>
+          <label for="feedback-name__id">Ваше имя:</label>
+          <input type="text" name="feedback-name" placeholder="Представьтесь, пожалуйста" id="feedback-name__id" required>
+        </p>
+        <p>
+          <label for="feedback-email__id">Ваш e-mail:</label>
+          <input type="email" name="feedback-email" placeholder="Для отправки ответа" id="feedback-email__id" required>
+        </p>
+        <p>
+          <label for="feedback-comment__id">Текст письма:</label>
+          <textarea name="feedback-comment" placeholder="В свободной форме" id="feedback-comment__id" required></textarea>
+        </p>
+        <input type="submit" class="button send-button" value="Отправить">
+      </form>
+      <button type="button" class="modal-close">Закрыть</button>
+    </section>
+    <script src="js/feedback.js"></script>
   </body>
 </html>
