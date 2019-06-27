@@ -239,7 +239,11 @@ input[type="radio"].visually-hidden {
 
 .button {
   display: block;
-  padding: 15px 0;
+  width: 160px;
+  height: 50px;
+  padding: 0;
+  font-size: 16px;
+  line-height: 18px;
   color: #ffffff;
   text-align: center;
   text-transform: uppercase;
@@ -263,6 +267,7 @@ input[type="radio"].visually-hidden {
 .button-know-more {
   margin-top: 40px;
   width: 240px;
+  line-height: 50px;
 }
 
 .slide__image {
@@ -523,7 +528,12 @@ input[type="radio"].visually-hidden {
   border: none;
 }
 
+.catalog-filters__form fieldset:not(:last-of-type) {
+  margin-bottom: 55px;
+}
+
 .catalog-filters__form legend {
+  margin-bottom: 20px;
   padding: 0;
   font-size: 18px;
   font-weight: 700;
@@ -531,16 +541,18 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
 }
 
-.catalog-filters__form legend:first-of-type {
-  margin-bottom: 55px;
+.catalog-filters__form ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .catalog-filters__form input {
   margin: 0;
 }
 
-.price-filter {
-  
+.price-filter legend {
+  margin-bottom: 55px;
 }
 
 .price-filter__list {
@@ -552,15 +564,22 @@ input[type="radio"].visually-hidden {
   list-style: none;
 }
 
+.price-filter__list li {
+  display: flex;
+  align-items: center;
+}
+
 .price-filter__list li:nth-of-type(1) {
   width: 100%;
   padding: 30px 20px;
   margin-bottom: 15px;
   background-color: #eeeeee;
+  border-radius: 3px;
 }
 
 .price-filter input[name="price-range"] {
   width: 100%;
+  style: none;
 }
 
 .price-filter label {
@@ -580,9 +599,27 @@ input[type="radio"].visually-hidden {
   text-align: center;
   background-color: #eeeeee;
   border: none;
+  border-radius: 3px;
 }
 
-.price-filter input[name="price-from"] {
+.catalog-filters__form .button-show {
+  width: 100%;
+  margin-top: 50px;
+  color: #000000;
+  background-color: #eeeeee;
+}
+
+.catalog-filters__form .button-show:hover {
+  background-color: #dfdfdf;
+}
+
+.catalog-filters__form .button-show:hover {
+  background-color: #dfdfdf;
+}
+
+.catalog-filters__form .button-show:active {
+  background-color: #d5d5d5;
+  color: rgba(0, 0, 0, 0.1);
 }
 
 .catalog-goods {
