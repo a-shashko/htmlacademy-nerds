@@ -40,6 +40,7 @@
                 <li>
                   <label for="price-range__id" class="visually-hidden">Шкала</label>
                   <input type="range" name="price-range" value="15000" min="0" max="25000" id="price-range__id">
+                  <span class="bar"></span>
                 </li>
                 <li>
                   <label for="price-form__id">от</label>
@@ -53,43 +54,48 @@
             </fieldset>
             <fieldset class="grid-filter">
               <legend>Сетка:</legend>
-              <ul class="filter-grid__list">
+              <ul class="grid-filter__list">
                 <li>
-                    <input type="radio" name="filter-grid" value="adaptive" id="filter-grid-adaptive" checked>
-                    <label for="filter-grid-adaptive">Адаптивная</label>
+                    <input type="radio" name="grid-filter" value="adaptive" id="grid-filter-adaptive" checked>
+                    <label for="grid-filter-adaptive">Адаптивная</label>
                 </li>
                 <li>
-                  <input type="radio" name="filter-grid" value="fixed" id="filter-grid-fixed">
-                  <label for="filter-grid-fixed">Фиксированная</label>
+                  <input type="radio" name="grid-filter" value="fixed" id="grid-filter-fixed">
+                  <label for="grid-filter-fixed">Фиксированная</label>
                 </li>
                 <li>
-                  <input type="radio" name="filter-grid" value="rubber" id="filter-grid-rubber" disabled>
-                  <label for="filter-grid-rubber">Резиновая</label>
+                  <input type="radio" name="grid-filter" value="rubber" id="grid-filter-rubber" disabled>
+                  <label for="grid-filter-rubber">Резиновая</label>
                 </li>
               </ul>
             </fieldset>
             <fieldset class="features-filter">
               <legend>Особенности:</legend>
-              <ul class="filter-features__list">
-                <li>
-                    <input type="checkbox" name="slider" id="slider__id" checked>
-                    <label for="slider__id">Слайдер</label>
+              <ul>
+                <li class="features-filter__item">
+                  <input type="checkbox" name="slider" id="slider__id" checked>
+                  <span class="checkmark"></span>
+                  <label for="slider__id">Слайдер</label>
                 </li>
-                <li>
-                    <input type="checkbox" name="advantage-block" id="advantage-block__id">
-                    <label for="advantage-block__id">Блок преимуществ</label>
+                <li class="features-filter__item">
+                  <input type="checkbox" name="advantage-block" id="advantage-block__id">
+                  <span class="checkmark"></span>
+                  <label for="advantage-block__id">Блок преимуществ</label>
                 </li>
-                <li>
-                    <input type="checkbox" name="news" id="news__id" checked>
-                    <label for="news__id">Новости</label>
+                <li class="features-filter__item">
+                  <input type="checkbox" name="news" id="news__id" checked>
+                  <span class="checkmark"></span>
+                  <label for="news__id">Новости</label>
                 </li>
-                <li>
-                    <input type="checkbox" name="gallery" id="gallery__id">
-                    <label for="gallery__id">Галерея</label>
+                <li class="features-filter__item">
+                  <input type="checkbox" name="gallery" id="gallery__id" disabled>
+                  <span class="checkmark"></span>
+                  <label for="gallery__id">Галерея</label>
                 </li>
-                <li>
-                    <input type="checkbox" name="cart" id="cart__id">
-                    <label for="cart__id">Корзина</label>
+                <li class="features-filter__item">
+                  <input type="checkbox" name="cart" id="cart__id">
+                  <span class="checkmark"></span>
+                  <label for="cart__id">Корзина</label>
                 </li>
               </ul>
             </fieldset>
@@ -98,28 +104,33 @@
         </section>
         <section class="catalog-goods">
           <h2 class="visually-hidden">Каталог товаров</h2>
-          <div class="goods-sorting">
+          <div class="catalog-goods__header">
             <span>Сортировать:</span>
-            <ul class="goods-sorting__list">
-              <li>По цене</li>
-              <li>По типу</li>
-              <li>По названию</li>
-            </ul>
-            <span class="goods-sorting__sign"></span>
+            <div class="goods-sorting">
+              <ul>
+                <li class="goods-sorting__item current">По цене</li>
+                <li class="goods-sorting__item"><a href="#">По типу</a></li>
+                <li class="goods-sorting__item"><a href="#">По названию</a></li>
+              </ul>
+              <div class="arrows">
+                <a href="#" class="arrow arrow-up current">По возрастанию</a>
+                <a href="#" class="arrow arrow-down">По убыванию</a>
+              </div>
+            </div>
           </div>
-          <ul class="sorting-results__list">
-            <li><a href="#"><img src="img/img-sedona.jpg" width="360" height="576" alt="Sedona"></a></li>
-            <li><a href="#"><img src="img/img-pink.jpg" width="360" height="576" alt="Pink"></a></li>
-            <li><a href="#"><img src="img/img-barbershop.jpg" width="360" height="576" alt="Barbershop"></a></li>
-            <li><a href="#"><img src="img/img-mishka.jpg" width="360" height="576" alt="Mishka"></a></li>
-            <li><a href="#"><img src="img/img-aplus.jpg" width="360" height="576" alt="Aplus"></a></li>
-            <li><a href="#"><img src="img/img-kvast.jpg" width="360" height="576" alt="Kvast"></a></li>
+          <ul class="sorting-result__list">
+            <li class="sorting-result__item"><a href="#"><img src="img/img-sedona.jpg" width="360" height="576" alt="Sedona"></a></li>
+            <li class="sorting-result__item"><a href="#"><img src="img/img-pink.jpg" width="360" height="576" alt="Pink"></a></li>
+            <li class="sorting-result__item"><a href="#"><img src="img/img-barbershop.jpg" width="360" height="576" alt="Barbershop"></a></li>
+            <li class="sorting-result__item"><a href="#"><img src="img/img-mishka.jpg" width="360" height="576" alt="Mishka"></a></li>
+            <li class="sorting-result__item"><a href="#"><img src="img/img-aplus.jpg" width="360" height="576" alt="Aplus"></a></li>
+            <li class="sorting-result__item"><a href="#"><img src="img/img-kvast.jpg" width="360" height="576" alt="Kvast"></a></li>
           </ul>
           <ul class="catalog-pagination__list">
-            <li><a href="#" class="current__link">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li class="catalog-pagination__item--next"><a href="#">Следующая</a></li>
+            <li class="catalog-pagination__item current">1</li>
+            <li class="catalog-pagination__item"><a href="#">2</a></li>
+            <li class="catalog-pagination__item"><a href="#">3</a></li>
+            <li class="catalog-pagination__item next"><a href="#">Следующая</a></li>
           </ul>
         </section>
       </div>
